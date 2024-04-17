@@ -31,7 +31,7 @@
     </div>
 
     <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {
             function validateEmail($email) {
                 // Filtrar la entrada para evitar ataques de inyección de código
                 $email = filter_var(trim($email), FILTER_SANITIZE_EMAIL);
