@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/ccnaSesión.css">
+</head>
+<body>
+    <div class="div1">
+       <div class="div2">
+            <img src="https://tr.rbxcdn.com/b40940ece2558c1fb1a5078c91e469ff/420/420/Image/Png" alt="">
+       </div>
+       <div class="div3">
+            <h2>Inicio de sesión</h2>
+            <form id="loginForm" action="#" onsubmit="return validateEmail()">
+                <label for="input1">Correo electrónico <input type="email" id="input1" required></label>
+                <button type="submit">Siguiente</button>
+            </form>
+       </div>
+       <div class="div4">
+            <a href="">¿Desbloquear cuenta?</a>
+            <a href="">¿Ha olvidado su dirección de correo electrónico?</a>
+            <a href="">Ayuda</a>
+       </div>
+       <hr>
+       <div class="div5">
+        <p>¿No tiene una cuenta?  <a href="">Regístrese</a></p>
+       </div>
+    </div>
+
+    <script>
+        function validateEmail() {
+            var emailInput = document.getElementById('input1');
+            var email = emailInput.value.trim();
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            
+            if (!emailPattern.test(email)) {
+                alert('Por favor, introduzca una dirección de correo electrónico válida.');
+                emailInput.focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
